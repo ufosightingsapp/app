@@ -16,3 +16,6 @@ To build and run the app, follow these steps:
 
 You can download the app from the [Google Play Store](https://play.google.com/store/apps/details?id=app.ufosightings.www).
 
+## Website
+
+All reports can also be discovered without on [UFO Sightings](https://ufosightings.app) and [UFO Sightings App](https://web.ufosightings.app)
