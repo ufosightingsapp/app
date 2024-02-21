@@ -1,0 +1,22 @@
+<div class="report-media-overlay" *ngIf="selected">
+  <div class="background" (click)="close()"></div>
+  <div class="content">
+    <div class="youtube-player" *ngIf="selected.type == 'youtube'">
+      <youtube-player
+        [videoId]="selected.filename"
+        [width]="getContentWidth()"
+        [height]="ytHeight"
+      ></youtube-player>
+    </div>
+    <div class="youtube-player" *ngIf="selected.type == 'youtubeshorts'">
+      <youtube-player
+        [videoId]="selected.filename"
+        [width]="getContentWidth()"
+        [height]="getContentHeight()"
+      ></youtube-player>
+    </div>
+    <div class="image" *ngIf="selected.type == 'image'">
+      <img [src]="imageUrl" />
+    </div>
+  </div>
+</div>

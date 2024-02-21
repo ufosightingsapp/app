@@ -1,0 +1,282 @@
+{
+  "brand": {
+    "slogan": "All around the globe"
+  },
+  "common": {
+    "close": "Close",
+    "view_on_map": "View on Map",
+    "yes": "Yes",
+    "no": "No",
+    "view": "View",
+    "hide": "Hide",
+    "comments": "comments",
+    "submit": "Submit",
+    "back": "Back",
+    "next": "Next",
+    "remove": "Remove",
+    "video_unsupported": "Your browser does not support the video tag.",
+    "video": "Video",
+    "photo": "Photo"
+  },
+  "navigation": {
+    "bottom": {
+      "first": "Map",
+      "second": "Reports"
+    },
+    "side": {
+      "myreports": "My Reports / Bookmarks",
+      "howto": "HowTo",
+      "contact": "Contact",
+      "privacy": "Privacy Policy",
+      "telegram": "Join us on Telegram"
+    }
+  },
+  "apppopup": {
+    "headline": "Use our Android app!",
+    "text": "Get notifications and much more features in our app for Android."
+  },
+  "contact": {
+    "alerts": {
+      "invalid_email": "Please enter a valid email address.",
+      "invalid_subject": "Please enter a subject.",
+      "invalid_message": "Please enter a message.",
+      "submit_success": "Your message has been sent successfully.",
+      "submit_error": "Error sending email, please try again later."
+    },
+    "header": {
+      "title": "Contact"
+    },
+    "body": {
+      "text": "You are the community, you build this app. Write us with any concern and we take it very seriously. We will get back to you as soon as possible."
+    },
+    "form": {
+      "email": {
+        "label": "Your email",
+        "placeholder": ""
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "Enter your subject"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Your message to us"
+      },
+      "submit": "Send"
+    }
+  },
+  "filter": {
+    "header": {
+      "title": "Filter"
+    },
+    "body": {
+      "text": "Refine the map's displayed locations by applying a time-based filter."
+    },
+    "selections": {
+      "last_seven": "Last 7 days",
+      "last_thirty": "Last 30 days",
+      "last_six_months": "Last 6 months",
+      "last_twelve_months": "Last 12 months",
+      "all_time": "All time",
+      "from": "From",
+      "to": "To"
+    },
+    "actions": {
+      "back_map": "Back to map"
+    },
+    "toasts": {
+      "filter_applied": "Filter applied",
+      "filter_cleared": "Filter cleared"
+    }
+  },
+  "howto": {
+    "header": {
+      "title": "HowTo"
+    },
+    "body": {
+      "card_first": {
+        "title": "Spotted a UFO and excited to share with the world?",
+        "subtitle": "Posting your report is a breeze with these easy steps:",
+        "paragraphs": {
+          "1": " 1. Begin by tapping on the specific location where you saw the UFO - our interactive map makes this effortless!",
+          "2": "2. A pop-up form will spring up, ready to detail your encounter. Start by selecting the date of the incident.",
+          "3": "3. Proceed to the report text field and fill out your exciting extraterrestrial encounter. Be as detailed as you can to make others part of your experience!",
+          "4": "4. If you possess visual proof of your sighting, even better! You have an optional field to upload photos and immortalize the moment.",
+          "5": "5. Got the sighting recorded on video? You can provide a YouTube video link in another optional field. Videos give an unparalleled depth to your reports!",
+          "6": "6. Finally, click the 'Submit' button to publish your report and share your celestial encounter with our global community.",
+          "7": "So, let's start sharing and connect with others in the universal quest for the extraordinary!"
+        }
+      },
+      "card_second": {
+        "title": "Removing content from the 'UFO Sightings' app is a collective decision, making the platform truly community-driven.",
+        "subtitle": "Here's how you can contribute:",
+        "paragraphs": {
+          "1": " 1. Browse through the posted reports. If you come across a report that you believe shouldn't be part of the app - whether due to irrelevance, false information, or any other reason - vote it down.",
+          "2": "2. Voting is as simple as pressing a button. Look for the 'downvote' option, usually visualized with a downward-pointing arrow or a 'thumbs down' icon, and click on it.",
+          "3": "3. An accumulation of downvotes levels the playing field. If a report gets a 66% or more negative rating, it automatically gets removed from the app.",
+          "4": "This democratic process ensures the information on 'UFO Sightings' is accurate, relevant, and sparks interesting conversations. So, review, vote, and help us maintain a quality community!"
+        }
+      }
+    }
+  },
+  "map": {
+    "header": {
+      "title": "Map"
+    },
+    "alerts": {
+      "unknown_spot": "Couldn't find the spot, please try again."
+    },
+    "toasts": {
+      "no_spots_in_time": "No sightings found in your selected time range."
+    },
+    "guide": {
+      "paragraph": "Hint: To submit a UFO sighting, simply tap the specific location on the map where the event occurred."
+    },
+    "infowindow": {
+      "header": {
+        "title": "Information"
+      },
+      "body": {
+        "empty": "Nothing to see here, this spot is empty because the report/s were removed recently. The spot will disappear soon."
+      }
+    },
+    "formwindow": {
+      "header": {
+        "title": "Report Sighting"
+      }
+    }
+  },
+  "myreports": {
+    "header": {
+      "title": "My reports"
+    },
+    "empty_reports": "You haven't created any report yet.",
+    "empty_bookmarks": "You haven't bookmarked any report yet.",
+    "tabs": {
+      "first": "My reports",
+      "second": "Bookmarked"
+    }
+  },
+  "notifications": {
+    "header": {
+      "title": "Notifications"
+    },
+    "empty": "You don't have any notifications yet."
+  },
+  "pushrequest": {
+    "confirm_message": "Do you want to get notified when you are near an ongoing UFO sighting?"
+  },
+  "comments": {
+    "hook": "Be the first to leave a comment.",
+    "form": {
+      "text": {
+        "placeholder": "Leave your comment..."
+      }
+    }
+  },
+  "commentvote": {
+    "request": "Was this comment helpful/informative?",
+    "info": "Downvotes will remove this comment:"
+  },
+  "reportform": {
+    "steps": {
+      "first": "Date",
+      "second": "Report",
+      "third": "Media",
+      "fourth": "Online"
+    },
+    "date": {
+      "label": "Write your report:"
+    },
+    "report": {
+      "label": "Write your report:",
+      "placeholder": "Please insert a lot of details in your report. Tell us what the weather was like, what the UFO looked like, and how it moved. Let us know how long you saw it for, and if anyone else saw it too.",
+      "checklist": {
+        "label": "Checklist to write a great report (optional):",
+        "items": {
+          "first": "Weather",
+          "second": "approx. Distance",
+          "third": " Object shape",
+          "fourth": "Object movement",
+          "fifth": "Duration",
+          "sixth": "Other witnesses"
+        }
+      }
+    },
+    "media": {
+      "label": "Upload photos or videos (optional)"
+    },
+    "online": {
+      "youtube": "Add a YouTube Video (optional):",
+      "youtube_short": "Add a YouTube Shorts Video (optional):",
+      "tiktok": "Add a TikTok Video (optional):"
+    },
+    "alerts": {
+      "steps": {
+        "2": {
+          "title": "Invalid text",
+          "text": "Please enter a few words about your sighting first."
+        },
+        "3": {
+          "title": "Please wait..",
+          "text": "Your files are still uploading. Please wait a moment."
+        }
+      },
+      "date": {
+        "invalid": {
+          "title": "Invalid date",
+          "text": "Please select a date in the past."
+        }
+      },
+      "submit": {
+        "invalid_date": "Please select a date in the past.",
+        "invalid_report": "Please enter a few words about your sighting first.",
+        "invalid_youtube": "Invalid YouTube URL",
+        "invalid_youtube_short": "Invalid YouTube Shorts URL",
+        "invalid_tiktok": "Invalid TikTok URL",
+        "send_error": "Error while saving report. Please try again later."
+      }
+    }
+  },
+  "reportremove": {
+    "info": "Do you want to remove your report?",
+    "confirm": "Do you really want to remove this report?"
+  },
+  "reportvote": {
+    "info": "Was this report helpful/informative?",
+    "info_remove": "Downvotes will remove this report:"
+  },
+  "reportstream": {
+    "header": {
+      "title": "Reports"
+    },
+    "body": {
+      "title": "Latest reports"
+    },
+    "tabs": {
+      "first": "Latest sightings",
+      "second": "Recently added"
+    }
+  },
+  "spotinfo": {
+    "header": {
+      "title": "First sighting",
+      "sighting": "sighting"
+    }
+  },
+  "appupdate": {
+    "header": {
+      "title": "Update available"
+    },
+    "body": {
+      "text": "There's a world of enhanced performance waiting for you. We really think you're going to love it. To get the update, just head over to the app store and hit the 'Update' button."
+    },
+    "action": "Install now!"
+  },
+  "uploadmedia": {
+    "web_button_label": "Attach Videos or Photos",
+    "toasts": {
+      "error": "Error while uploading your file, please try again."
+    }
+  }
+}

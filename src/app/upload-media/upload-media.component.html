@@ -1,0 +1,62 @@
+<ion-grid [fixed]="true" *transloco="let t">
+  <ion-row *ngIf="isApp">
+    <ion-col size="6">
+      <ion-button
+        (click)="selectVideo()"
+        expand="block"
+        fill="outline"
+        [disabled]="uploadingVideo"
+        ><ion-icon name="attach" *ngIf="!uploadingVideo"></ion-icon
+        ><ion-spinner name="dots" *ngIf="uploadingVideo"></ion-spinner>&nbsp;
+        {{ t("common.video") }}</ion-button
+      >
+    </ion-col>
+    <ion-col size="6">
+      <ion-button
+        (click)="selectImage()"
+        expand="block"
+        fill="outline"
+        [disabled]="uploadingImage"
+        ><ion-icon name="attach" *ngIf="!uploadingImage"></ion-icon
+        ><ion-spinner name="dots" *ngIf="uploadingImage"></ion-spinner>&nbsp;
+        {{ t("common.photo") }}</ion-button
+      >
+    </ion-col>
+  </ion-row>
+  <ion-row *ngIf="isWeb"
+    ><ion-col
+      ><div class="file-uploader">
+        <input
+          type="file"
+          class="file-input"
+          accept="image/*,video/*"
+          (change)="onWebSelectChange($event)"
+          #fileUpload
+        /><ion-button
+          size="default"
+          (click)="selectVideo()"
+          expand="block"
+          fill="outline"
+          [disabled]="webUploadRunning"
+          ><ion-icon name="attach" *ngIf="!webUploadRunning"></ion-icon
+          ><ion-spinner name="dots" *ngIf="webUploadRunning"></ion-spinner
+          >&nbsp;{{ t("uploadmedia.web_button_label") }}</ion-button
+        >
+      </div></ion-col
+    ></ion-row
+  >
+</ion-grid>
+<ng-container *transloco="let t">
+  <ion-list *ngIf="files.length >= 1">
+    <ion-item *ngFor="let file of files">
+      <ion-thumbnail slot="start">
+        <ion-img [src]="generateUrl(file)"></ion-img>
+      </ion-thumbnail>
+      <strong *ngIf="file.type == 'image'">{{ t("common.photo") }}</strong>
+      <strong *ngIf="file.type == 'video'">{{ t("common.video") }}</strong>
+      <ion-button slot="end" (click)="removeFile(file)">{{
+        t("common.remove")
+      }}</ion-button>
+    </ion-item>
+  </ion-list>
+</ng-container>

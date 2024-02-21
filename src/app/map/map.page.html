@@ -1,0 +1,30 @@
+<ion-header [translucent]="true" *transloco="let t">
+  <ion-toolbar>
+    <ion-row class="ion-justify-content-start">
+      <app-navigation-toggle></app-navigation-toggle>
+      <ion-title>{{t("map.header.title")}}</ion-title>
+      <app-notification-toggle></app-notification-toggle>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-progress-bar type="indeterminate" *ngIf="mapLoading"></ion-progress-bar>
+
+  <div id="map-cage">
+    <capacitor-google-map #map id="map"></capacitor-google-map>
+    <div class="filter-button" *ngIf="!mapLoading">
+      <ion-button (click)="openFilter()">
+        <ion-icon name="options"></ion-icon>
+      </ion-button>
+    </div>
+    <div class="my-location-button" *ngIf="!mapLoading">
+      <ion-button (click)="moveMyLocation()">
+        <ion-icon name="locate"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+
+  <app-guide></app-guide>
+</ion-content>
+<app-pushrequest></app-pushrequest>

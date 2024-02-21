@@ -11,6 +11,7 @@ To build and run the app, follow these steps:
 3. Navigate to the project directory.
 4. Install the project dependencies by running `npm install`.
 5. Build the app by running `npm run build` or run it in the browser using `ionic serve`.
+6. Add the android application with `ionic cap add android`
 
 ## App Store
 

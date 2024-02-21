@@ -1,0 +1,75 @@
+ion-label small {
+  opacity: 0.5;
+}
+
+.media-cage {
+  display: block;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  display: block;
+  margin: 0px 0px 10px;
+  padding-top: 10px;
+  width: 100%;
+}
+
+ion-list {
+  width: 100%;
+}
+
+ion-item.no-border {
+  --border-color: transparent;
+  --border-width: 0px;
+}
+
+.spacer-bottom {
+  display: block;
+  height: 75px;
+}
+
+.expiring {
+  opacity: 0.5;
+}
+
+.action-row {
+  width: 100%;
+  padding: 0px 0px 15px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.align-items-start {
+  align-items: start;
+}
+
+.location-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.location-header label {
+  opacity: 0.8;
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.location-header .date {
+  font-size: 18px;
+}
+
+.location-header .info {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.report {
+  margin-bottom: 20px;
+  padding: 10px 0px;
+}
+
+app-report {
+  width: 100%;
+}

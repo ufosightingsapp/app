@@ -1,0 +1,24 @@
+ion-item {
+  --border-color: transparent;
+  --border-width: 0px;
+}
+ion-thumbnail {
+  --border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: inline-flex;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  position: relative;
+}
+ion-thumbnail:last-child {
+  margin-right: 0px;
+}
+
+ion-thumbnail ion-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}

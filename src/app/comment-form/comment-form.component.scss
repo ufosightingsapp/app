@@ -1,0 +1,41 @@
+li.message {
+  padding: 15px 0px;
+  text-align: center;
+  opacity: 0.5;
+  font-size: 14px;
+}
+
+ion-textarea {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+li.form-wrapper {
+  background-color: #121212;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 10px;
+
+  ion-textarea {
+    --padding-top: 5px;
+    --padding-bottom: 5px;
+  }
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    margin-left: 10px;
+    border-radius: 100px;
+    height: 30px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3881ff;
+  }
+}

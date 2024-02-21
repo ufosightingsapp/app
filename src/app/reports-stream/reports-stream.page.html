@@ -1,0 +1,95 @@
+<ion-header *transloco="let t">
+  <ion-toolbar>
+    <ion-title>{{t("reportstream.header.title")}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">{{t("common.close")}}</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content
+  [fullscreen]="true"
+  *transloco="let t"
+  (ionScroll)="onStreamScroll($event)"
+  [scrollEvents]="true"
+  id="stream"
+>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-row class="ion-justify-content-start">
+        <app-navigation-toggle></app-navigation-toggle>
+        <ion-title>{{t("reportstream.body.title")}}</ion-title>
+      </ion-row>
+    </ion-toolbar>
+  </ion-header>
+
+  <app-reports-stream-actions></app-reports-stream-actions>
+
+  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <div class="loader" *ngIf="streamService.loading">
+    <ion-spinner name="crescent"></ion-spinner>
+  </div>
+
+  <div class="app-info-window">
+    <p
+      class="alert alert-info"
+      *ngIf="!streamService.loading && streamService.reports.length == 0"
+    >
+      Sorry, no reports found.
+    </p>
+
+    <ion-item
+      [ngClass]="(report.unread) ? 'report ion-no-padding unread': 'report ion-no-padding'"
+      *ngFor="let report of streamService.reports"
+    >
+      <ion-list>
+        <ion-item class="no-border align-items-start">
+          <app-report [report]="report"></app-report>
+        </ion-item>
+        <ion-item class="no-border">
+          <ion-button
+            fill="solid"
+            color="primary"
+            (click)="openMap(report.spot._id)"
+          >
+            <ion-icon name="map"></ion-icon>&nbsp;
+            <ion-label>{{t("common.view_on_map")}}</ion-label>
+          </ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-item>
+  </div>
+
+  <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+  <app-report-media-popup></app-report-media-popup>
+</ion-content>
+
+<ion-fab
+  *ngIf="showBackToTopButton"
+  slot="fixed"
+  vertical="bottom"
+  horizontal="end"
+>
+  <ion-fab-button (click)="scrollTop()">
+    <ion-icon name="chevron-up"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+<ion-footer *transloco="let t">
+  <!-- <ion-tab-bar slot="bottom">
+    <ion-tab-button (click)="setType('latest')">
+      <ion-icon name="list"></ion-icon>
+      <ion-label>{{t("reportstream.tabs.first")}}</ion-label>
+    </ion-tab-button>
+    <ion-tab-button (click)="setType('recent')">
+      <ion-icon name="log-in"></ion-icon>
+      <ion-label>{{t("reportstream.tabs.second")}}</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar> -->
+</ion-footer>

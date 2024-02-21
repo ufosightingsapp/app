@@ -1,0 +1,178 @@
+<div class="form-steps" *transloco="let t">
+  <div class="form-steps-overview">
+    <div
+      [ngClass]="{
+        item: true,
+        success: currentStep > 0,
+        active: currentStep == 0
+      }"
+    >
+      <label>{{ t("reportform.steps.first") }}</label>
+      <span *ngIf="currentStep <= 0">1</span>
+      <span *ngIf="currentStep > 0"
+        ><ion-icon name="checkmark-outline"></ion-icon
+      ></span>
+    </div>
+
+    <div
+      [ngClass]="{
+        item: true,
+        success: currentStep > 1,
+        active: currentStep == 1
+      }"
+    >
+      <label>{{ t("reportform.steps.second") }}</label>
+      <span *ngIf="currentStep <= 1">2</span>
+      <span *ngIf="currentStep > 1"
+        ><ion-icon name="checkmark-outline"></ion-icon
+      ></span>
+    </div>
+
+    <div
+      [ngClass]="{
+        item: true,
+        success: currentStep > 2,
+        active: currentStep == 2
+      }"
+    >
+      <label>{{ t("reportform.steps.third") }}</label>
+      <span *ngIf="currentStep <= 2">3</span>
+      <span *ngIf="currentStep > 2"
+        ><ion-icon name="checkmark-outline"></ion-icon
+      ></span>
+    </div>
+
+    <div
+      [ngClass]="{
+        item: true,
+        success: currentStep > 3,
+        active: currentStep == 3
+      }"
+    >
+      <label>{{ t("reportform.steps.fourth") }}</label>
+      <span *ngIf="currentStep <= 3">4</span>
+      <span *ngIf="currentStep > 3"
+        ><ion-icon name="checkmark-outline"></ion-icon
+      ></span>
+    </div>
+  </div>
+
+  <div class="form-step-wrapper">
+    <div
+      class="form-step"
+      [ngClass]="{ active: currentStep == 0, left: currentStep > 0 }"
+    >
+      <label>{{ t("reportform.date.label") }}</label>
+      <ion-datetime-button datetime="datetime"></ion-datetime-button>
+    </div>
+
+    <div
+      class="form-step"
+      [ngClass]="{ active: currentStep == 1, left: currentStep > 1 }"
+    >
+      <label>{{ t("reportform.report.label") }}</label>
+      <ion-textarea
+        [placeholder]="t('reportform.report.placeholder')"
+        (ionInput)="onTextChange($event)"
+        rows="6"
+      ></ion-textarea>
+      <div class="checklist">
+        <small>{{ t("reportform.report.checklist.label") }}</small>
+        <ul>
+          <li>
+            <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+            {{ t("reportform.report.checklist.items.first") }}
+          </li>
+          <li>
+            <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+            {{ t("reportform.report.checklist.items.second") }}
+          </li>
+          <li>
+            <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+            {{ t("reportform.report.checklist.items.third") }}
+          </li>
+          <li>
+            <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+            {{ t("reportform.report.checklist.items.fourth") }}
+          </li>
+          <li>
+            <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+            {{ t("reportform.report.checklist.items.fifth") }}
+          </li>
+          <li>
+            <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+            {{ t("reportform.report.checklist.items.sixth") }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      class="form-step"
+      [ngClass]="{ active: currentStep == 2, left: currentStep > 2 }"
+    >
+      <label>{{ t("reportform.report.label") }}</label>
+      <app-upload-media
+        (filesChange)="onFilesChange($event)"
+        (uploadChange)="onUploadChange($event)"
+      ></app-upload-media>
+    </div>
+
+    <div
+      class="form-step"
+      [ngClass]="{ active: currentStep == 3, left: currentStep > 3 }"
+    >
+      <label>{{ t("reportform.online.youtube") }}</label>
+      <ion-input
+        type="text"
+        placeholder="www.youtube.com/watch?v=..."
+        (ionInput)="onYouTubeChange($event)"
+      ></ion-input>
+      <br />
+
+      <label>{{ t("reportform.online.youtube_short") }}</label>
+      <ion-input
+        type="text"
+        placeholder="www.youtube.com/shorts/..."
+        (ionInput)="onYouTubeShortsChange($event)"
+      ></ion-input>
+      <br />
+
+      <label>{{ t("reportform.online.tiktok") }}</label>
+      <ion-input
+        type="text"
+        placeholder="www.tiktok.com/@user/video/..."
+        (ionInput)="onTikTokChange($event)"
+      ></ion-input>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <ion-button (click)="nextStep()" *ngIf="currentStep < steps">{{
+      t("common.next")
+    }}</ion-button>
+    <ion-button
+      (click)="submit()"
+      *ngIf="!submitting && currentStep == steps"
+      >{{ t("common.submit") }}</ion-button
+    >
+    <ion-button
+      (click)="prevStep()"
+      *ngIf="currentStep <= steps && currentStep != 0 && !submitting"
+      fill="outline"
+      >{{ t("common.back") }}</ion-button
+    >
+    <div class="loader" [style.display]="!submitting ? 'none' : 'block'">
+      <ion-spinner name="dots"></ion-spinner>
+    </div>
+  </div>
+</div>
+
+<ion-modal [keepContentsMounted]="true">
+  <ng-template>
+    <ion-datetime
+      id="datetime"
+      (ionChange)="onDateChange($event)"
+    ></ion-datetime>
+  </ng-template>
+</ion-modal>

@@ -1,0 +1,43 @@
+<div class="comment">
+  <div class="comment-group">
+    <div class="comment-content">
+      <div class="comment-header">
+        <ion-icon name="chatbox-outline"></ion-icon>
+        <div class="comment-meta">
+          <span class="comment-author">Anonymous</span>
+          <span class="comment-date" *ngIf="comment.creationTime">{{
+            formatDateTime(comment.creationTime)
+          }}</span>
+        </div>
+      </div>
+      <div
+        class="comment-text"
+        [innerHTML]="replaceLinks(comment.message)"
+      ></div>
+      <div class="media-cage" *ngIf="mediaExists()">
+        <app-media-list [media]="comment.media"></app-media-list>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="comment-actions">
+  <ion-button fill="clear" (click)="reply()"
+    ><ion-icon name="arrow-redo"></ion-icon> Reply</ion-button
+  ><app-comment-vote [comment]="comment" />
+</div>
+<div class="replies">
+  <ul *ngIf="replyTo != ''">
+    <app-comment-form
+      [report]="report"
+      [parentId]="comment._id"
+      (refresh)="refresh.emit($event)"
+    ></app-comment-form>
+  </ul>
+  <app-comments
+    *ngIf="hasReplies()"
+    [report]="report"
+    [parentId]="comment._id"
+    [comments]="comment.replies"
+    (parentRefresh)="refresh.emit($event)"
+  ></app-comments>
+</div>

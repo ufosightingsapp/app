@@ -1,0 +1,84 @@
+<ion-header *transloco="let t">
+  <ion-toolbar>
+    <ion-title>{{t("filter.header.title")}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">{{t("common.close")}}</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *transloco="let t">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-row class="ion-justify-content-start">
+        <app-navigation-toggle></app-navigation-toggle>
+        <ion-title>{{t("filter.header.title")}}</ion-title>
+      </ion-row>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-item>
+      <p>{{t("filter.body.text")}}</p>
+    </ion-item>
+    <ion-item>
+      <ion-button expand="full" (click)="fromString('week')"
+        >{{t("filter.selections.last_seven")}}</ion-button
+      >
+    </ion-item>
+    <ion-item>
+      <ion-button expand="full" (click)="fromString('month')"
+        >{{t("filter.selections.last_thirty")}}</ion-button
+      >
+    </ion-item>
+    <ion-item>
+      <ion-button expand="full" (click)="fromString('halfyear')"
+        >{{t("filter.selections.last_six_months")}}</ion-button
+      >
+    </ion-item>
+    <ion-item>
+      <ion-button expand="full" (click)="fromString('year')"
+        >{{t("filter.selections.last_twelve_months")}}</ion-button
+      >
+    </ion-item>
+    <ion-item>
+      <ion-button expand="full" (click)="clear()"
+        >{{t("filter.selections.all_time")}}</ion-button
+      >
+    </ion-item>
+    <ion-item>
+      <ion-label>{{t("filter.selections.from")}}</ion-label>
+      <ion-datetime-button datetime="customFrom"></ion-datetime-button>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{t("filter.selections.to")}}</ion-label>
+      <ion-datetime-button datetime="curstomTo"></ion-datetime-button>
+    </ion-item>
+  </ion-list>
+  <div class="action-row">
+    <ion-button expand="full" (click)="backToMap()"
+      ><ion-icon name="map"></ion-icon
+      >&nbsp;{{t("filter.actions.back_map")}}</ion-button
+    >
+  </div>
+</ion-content>
+
+<ion-modal [keepContentsMounted]="true">
+  <ng-template>
+    <ion-datetime
+      id="customFrom"
+      (ionChange)="onFromChange($event)"
+      [value]="fromDate"
+    ></ion-datetime>
+  </ng-template>
+</ion-modal>
+
+<ion-modal [keepContentsMounted]="true">
+  <ng-template>
+    <ion-datetime
+      id="curstomTo"
+      (ionChange)="onToChange($event)"
+      [value]="toDate"
+    ></ion-datetime>
+  </ng-template>
+</ion-modal>

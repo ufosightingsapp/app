@@ -1,0 +1,28 @@
+<ion-content *transloco="let t">
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <div class="location-header">
+    <label>{{ t("spotinfo.header.title") }}</label>
+    <div class="date">{{ date }}</div>
+    <div class="info">
+      {{ reports.length }} {{ t("spotinfo.header.sighting") }}
+    </div>
+  </div>
+
+  <ion-item class="report" *ngFor="let report of reports">
+    <app-report
+      [report]="report"
+      (refresh)="handleRefresh($event)"
+    ></app-report>
+  </ion-item>
+
+  <div class="spacer-bottom"></div>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="triggerCreateForm()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

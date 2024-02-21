@@ -1,0 +1,10 @@
+.menu-button {
+  --color: initial;
+  background: none;
+  color: var(--color);
+  border: none;
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: 0px 10px 0px 10px;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}

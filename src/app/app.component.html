@@ -1,0 +1,62 @@
+<ion-app *transloco="let t">
+  <ion-content>
+    <ion-split-pane contentId="main-content">
+      <ion-menu contentId="main-content" type="overlay">
+        <ion-content>
+          <ion-list id="inbox-list">
+            <ion-list-header>UFO Sightings</ion-list-header>
+            <ion-note>{{ t("brand.slogan") }}</ion-note>
+
+            <ion-menu-toggle
+              auto-hide="false"
+              *ngFor="let p of appPages; let i = index"
+            >
+              <ion-item
+                lines="none"
+                detail="false"
+                (click)="openPage(p.onClick)"
+              >
+                <ion-icon
+                  aria-hidden="true"
+                  slot="start"
+                  [ios]="p.icon + '-outline'"
+                  [md]="p.icon + '-sharp'"
+                ></ion-icon>
+                <ion-label>{{ p.title }}</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+            <ion-item class="no-border">
+              <ion-button (click)="openTelegram()">{{
+                t("navigation.side.telegram")
+              }}</ion-button>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-menu>
+      <ion-router-outlet id="main-content"></ion-router-outlet>
+    </ion-split-pane>
+  </ion-content>
+  <ion-footer>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button (click)="closeModals()">
+        <ion-icon name="map"></ion-icon>
+        <ion-label>{{ t("navigation.bottom.first") }}</ion-label>
+      </ion-tab-button>
+      <ion-tab-button (click)="openReports()">
+        <ion-icon name="list"></ion-icon>
+        <ion-label>{{ t("navigation.bottom.second") }}</ion-label>
+      </ion-tab-button>
+      <ion-tab-button (click)="openStarlinkTracker()">
+        <ion-icon name="sparkles-outline"></ion-icon>
+        <ion-label>Starlink</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-footer>
+  <ion-toast
+    [isOpen]="!connected"
+    message="No internet connection"
+    position="middle"
+    color="danger"
+    icon="flash-off-outline"
+  ></ion-toast>
+</ion-app>

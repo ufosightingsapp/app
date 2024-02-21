@@ -1,0 +1,30 @@
+<ion-item class="no-border ion-no-padding">
+  <div class="comment" *transloco="let t">
+    <div class="comment-list">
+      <ul *transloco="let t">
+        <app-comment-form
+          *ngIf="parentId == ''"
+          [report]="report"
+          [parentId]="parentId"
+          (refresh)="refreshComments($event)"
+        ></app-comment-form>
+        <li *ngIf="!hasComments()" class="no-border message">
+          {{ t("comments.hook") }}
+        </li>
+        <li *ngIf="loading" class="loader no-border">
+          <ion-spinner name="crescent"></ion-spinner>
+        </li>
+        <li
+          class="comment-list-item"
+          *ngFor="let comment of comments; let index = index"
+        >
+          <app-comment
+            [comment]="comment"
+            [report]="report"
+            (refresh)="refreshComments($event)"
+          ></app-comment>
+        </li>
+      </ul>
+    </div>
+  </div>
+</ion-item>

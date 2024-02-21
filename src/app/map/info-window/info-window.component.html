@@ -1,0 +1,27 @@
+<ion-header *transloco="let t">
+  <ion-toolbar>
+    <ion-title>{{ t("map.infowindow.header.title") }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">{{ t("common.close") }}</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<app-report-media-popup></app-report-media-popup>
+
+<ion-content [scrollY]="false" *transloco="let t">
+  <div class="spinner" *ngIf="loading">
+    <ion-spinner name="dots"></ion-spinner>
+  </div>
+
+  <p class="alert danger" *ngIf="(!reports || reports.length == 0) && !loading">
+    {{ t("map.infowindow.body.empty") }}
+  </p>
+  <app-spot-info
+    *ngIf="!loading && reports && reports.length > 0"
+    [spot]="spot"
+    [reports]="reports"
+    (refresh)="handleInfoRefresh($event)"
+  >
+  </app-spot-info>
+</ion-content>

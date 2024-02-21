@@ -1,0 +1,59 @@
+<ion-header *transloco="let t">
+  <ion-toolbar>
+    <ion-title>{{t("contact.header.title")}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">{{t("common.close")}}</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *transloco="let t">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-row class="ion-justify-content-start">
+        <app-navigation-toggle></app-navigation-toggle>
+        <ion-title>{{t("contact.header.title")}}</ion-title>
+      </ion-row>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="content" *ngIf="!loading">
+    <p>{{t("contact.body.text")}}</p>
+    <ion-list>
+      <ion-list>
+        <ion-item>
+          <ion-input
+            [label]="t('contact.form.email.label')"
+            type="email"
+            placeholder="mymail@example.com"
+            [value]="email"
+            (change)="changeEmail($event)"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input
+            [label]="t('contact.form.subject.label')"
+            [placeholder]="t('contact.form.subject.placeholder')"
+            [value]="subject"
+            (change)="changeSubject($event)"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input
+            [label]="t('contact.form.message.label')"
+            [placeholder]="t('contact.form.message.placeholder')"
+            [value]="message"
+            (change)="changeMessage($event)"
+          ></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-list>
+    <br />
+    <ion-button (click)="sendEmail()">{{t("contact.form.submit")}}</ion-button>
+  </div>
+  <div class="loader" *ngIf="loading">
+    <ion-spinner name="crescent"></ion-spinner>
+  </div>
+</ion-content>

@@ -1,0 +1,54 @@
+<ion-header *transloco="let t">
+  <ion-toolbar>
+    <ion-title>{{ t("myreports.header.title") }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">{{ t("common.close") }}</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *transloco="let t">
+  <div class="loader" *ngIf="loading">
+    <ion-spinner name="crescent"></ion-spinner>
+  </div>
+
+  <div class="app-info-window">
+    <p class="info" *ngIf="type == 'myreports' && getReports().length == 0">
+      {{ t("myreports.empty_reports") }}
+    </p>
+    <p class="info" *ngIf="type == 'bookmarked' && getReports().length == 0">
+      {{ t("myreports.empty_bookmarks") }}
+    </p>
+    <ion-item class="report ion-no-padding" *ngFor="let report of getReports()">
+      <ion-list>
+        <ion-item class="no-border align-items-start">
+          <app-report [report]="report"></app-report>
+        </ion-item>
+        <ion-item class="no-border">
+          <ion-button
+            fill="solid"
+            color="primary"
+            (click)="openMap(report.spot._id)"
+          >
+            <ion-icon name="map"></ion-icon>&nbsp;
+            <ion-label>{{ t("common.view_on_map") }}</ion-label>
+          </ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-item>
+  </div>
+
+  <app-report-media-popup></app-report-media-popup>
+</ion-content>
+<ion-footer *transloco="let t">
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button (click)="setType('myreports')">
+      <ion-icon name="person"></ion-icon>
+      <ion-label>{{ t("myreports.tabs.first") }}</ion-label>
+    </ion-tab-button>
+    <ion-tab-button (click)="setType('bookmarked')">
+      <ion-icon name="bookmarks"></ion-icon>
+      <ion-label>{{ t("myreports.tabs.second") }}</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-footer>

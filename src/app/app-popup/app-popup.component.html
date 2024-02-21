@@ -1,0 +1,11 @@
+<ion-content *transloco="let t">
+  <div class="app-popup">
+    <h3>{{ t("apppopup.headline") }}</h3>
+    <p>{{ t("apppopup.text") }}</p>
+    <ion-button expand="block" fill="outline" (click)="openPlayStore()"
+      ><ion-icon name="logo-google-playstore" slot="start"></ion-icon> Play
+      Store</ion-button
+    >
+    <ion-button expand="block" fill="clear" (click)="close()">Close</ion-button>
+  </div>
+</ion-content>

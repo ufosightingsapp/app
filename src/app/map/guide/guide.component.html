@@ -1,0 +1,6 @@
+<div class="guide-overlay" *ngIf="showGuide" (click)="hide()">
+  <p *transloco="let t">
+    {{ t("map.guide.paragraph") }}
+    <ion-icon name="arrow-redo-outline"></ion-icon>
+  </p>
+</div>

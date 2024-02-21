@@ -1,0 +1,46 @@
+.report-media-overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 30000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .content {
+    background: #292929;
+    max-width: 90%;
+    height: auto;
+    max-height: 90%;
+    overflow: auto;
+    position: relative;
+    z-index: 101;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #474747;
+
+    .youtube-player {
+      padding: 10px 0px;
+    }
+    youtube-player {
+      margin: 0px auto;
+    }
+
+    .image img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  .background {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+  }
+}

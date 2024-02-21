@@ -1,0 +1,36 @@
+<ion-thumbnail *ngFor="let mediaItem of media">
+  <img
+    *ngIf="mediaItem.type == 'image'"
+    alt="{{ mediaItem.filename }}"
+    [src]="getThumbnailUrl(mediaItem)"
+    (click)="select(mediaItem)"
+  />
+  <img
+    *ngIf="mediaItem.type == 'youtube'"
+    alt="YouTube Video"
+    src="assets/images/youtube.png"
+    (click)="select(mediaItem)"
+  />
+  <img
+    *ngIf="mediaItem.type == 'youtubeshorts'"
+    alt="YouTube Shorts Video"
+    src="assets/images/youtubeshorts.png"
+    (click)="select(mediaItem)"
+  />
+  <img
+    *ngIf="mediaItem.type == 'tiktok'"
+    alt="TikTok Video"
+    src="assets/images/tiktok.png"
+    (click)="select(mediaItem)"
+  /><img
+    *ngIf="mediaItem.type == 'video'"
+    alt="Video"
+    [src]="getThumbnailUrl(mediaItem)"
+    (click)="select(mediaItem)"
+  />
+  <ion-icon
+    name="play"
+    *ngIf="mediaItem.type == 'video'"
+    (click)="select(mediaItem)"
+  ></ion-icon>
+</ion-thumbnail>

@@ -1,0 +1,7 @@
+<ion-alert
+  [isOpen]="isAlertOpen"
+  header="Get notified!"
+  [buttons]="alertButtons"
+  (didDismiss)="setResult($event)"
+  [message]="translocoService.translate('pushrequest.confirm_message')"
+></ion-alert>

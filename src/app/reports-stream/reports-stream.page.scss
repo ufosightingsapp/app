@@ -1,0 +1,53 @@
+.loader {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.app-info-window {
+  width: 100%;
+
+  ion-item,
+  ion-list {
+    width: 100%;
+  }
+
+  app-report-vote {
+    width: 100%;
+  }
+
+  ion-item.no-border {
+    --border-color: transparent;
+    --border-width: 0px;
+  }
+}
+
+.align-items-start {
+  align-items: start;
+}
+
+.report {
+  margin-bottom: 20px;
+  --inner-padding-end: 0px;
+  --padding-end: 0px;
+}
+
+.report.unread {
+  --background: #2f2f2f;
+  background-color: #2f2f2f;
+  --ion-item-background: #2f2f2f;
+}
+
+app-report {
+  width: 100%;
+}
+
+ion-content {
+  --background: #121212;
+}
+
+.alert.alert-info {
+  text-align: center;
+}

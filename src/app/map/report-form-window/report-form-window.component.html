@@ -1,0 +1,11 @@
+<ion-header *transloco="let t">
+  <ion-toolbar>
+    <ion-title>{{ t("map.formwindow.header.title") }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">{{ t("common.close") }}</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <app-report-form [spot]="info"></app-report-form>
+</ion-content>

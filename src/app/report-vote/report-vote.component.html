@@ -1,0 +1,23 @@
+<!-- <ion-item class="no-border ion-no-padding" *ngIf="showVoteButtons()">
+  
+    <small
+      *ngIf="!report.negativeScorePercent || report.negativeScorePercent < 50"
+      >{{ t("reportvote.info") }}</small
+    >
+    <small class="light-red" *ngIf="report.negativeScorePercent >= 50">{{
+      t("reportvote.info_remove")
+    }}</small> -->
+<div class="voting-wrapper" *transloco="let t">
+  <div class="action-group">
+    <button class="vote-button" (click)="up()" [disabled]="hasVoted">
+      {{ report.votes?.positive || 0 }}
+      <ion-icon name="arrow-up-outline"></ion-icon>
+    </button>
+    <button class="vote-button" (click)="down()" [disabled]="hasVoted">
+      {{ report.votes?.negative || 0 }}
+      <ion-icon name="arrow-down-outline"></ion-icon>
+    </button>
+  </div>
+</div>
+<!--   </div>
+</ion-item> -->

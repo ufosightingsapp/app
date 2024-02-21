@@ -1,0 +1,23 @@
+.report-stream-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: rgb(30, 30, 30);
+  margin-bottom: 20px;
+
+  .left,
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    background-color: var(--ion-color-primary, rgba(255, 255, 255, 0.1));
+    padding: 5px 10px;
+
+    ion-select {
+      min-height: 0px;
+      --ion-color-step-500: #ffffff;
+    }
+  }
+}

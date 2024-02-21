@@ -1,0 +1,21 @@
+<button
+  [ngClass]="
+    notificationStorageService.count.unread >= 1
+      ? 'menu-button ion-hide-lg-up'
+      : 'menu-button ion-hide-lg-up inactive'
+  "
+  (click)="open()"
+>
+  <span
+    *ngIf="
+      notificationStorageService.count.unread >= 1 &&
+      notificationStorageService.count.unread <= 99
+    "
+    class="number"
+    >{{ notificationStorageService.count.unread }}</span
+  >
+  <span *ngIf="notificationStorageService.count.unread > 99" class="number"
+    >99+</span
+  >
+  <ion-icon name="notifications-outline"></ion-icon>
+</button>

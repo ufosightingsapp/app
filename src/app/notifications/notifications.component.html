@@ -1,0 +1,57 @@
+<ion-header *transloco="let t">
+  <ion-toolbar>
+    <ion-title>{{ t("notifications.header.title") }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">{{ t("common.close") }}</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" [scollY]="false" *transloco="let t">
+  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <p *ngIf="!notifications || notifications.length == 0" class="info">
+    {{ t("notifications.empty") }}
+  </p>
+
+  <div
+    *ngIf="notifications && notifications.length >= 1"
+    class="notification-list"
+  >
+    <div
+      class="notification-wrapper"
+      *ngFor="let notification of notifications"
+    >
+      <div
+        [ngClass]="notification.seen ? 'notification' : 'notification unseen'"
+        (click)="open(notification)"
+      >
+        <div class="notification-icon"></div>
+        <div class="notification-content">
+          <div class="notification-title">
+            <h3>{{ notification.data.title }}</h3>
+          </div>
+          <div class="notification-body">
+            <p>{{ notification.data.body }}</p>
+          </div>
+        </div>
+        <div class="notification-actions">
+          <ion-icon name="chevron-forward"></ion-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ion-fab
+    vertical="bottom"
+    horizontal="end"
+    slot="fixed"
+    *ngIf="notifications && notifications.length >= 1"
+  >
+    <ion-fab-button (click)="clear()" color="danger">
+      <ion-icon name="trash"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

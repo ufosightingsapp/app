@@ -1,0 +1,250 @@
+.reportForm {
+  border-radius: 0px;
+  overflow: hidden;
+}
+
+.input-wrapper {
+  padding: 15px 10px;
+  margin: 0px 0px 15px 0px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+}
+
+.input-wrapper.no-border {
+  border-bottom: 0px solid transparent;
+}
+
+.loader {
+  width: 100%;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="file"] {
+  position: relative;
+  z-index: 2;
+  height: 45px;
+  display: block;
+  box-sizing: border-box;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+input[type="file"]::before {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  content: "Select File";
+  display: inline-block;
+  background: rgb(89, 89, 89);
+  color: white;
+  border-radius: 10px;
+  padding: 10px 0px;
+  width: 100%;
+  text-align: center;
+}
+
+.checklist {
+  padding: 15px 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.checklist ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.checklist ul li {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px 5px 0px;
+  font-size: 14px;
+}
+
+.checklist ul li svg {
+  margin-right: 15px;
+}
+
+.checklist ul li svg {
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.checklist ul li svg.red {
+  color: #b22222;
+}
+
+.checklist ul li svg.green {
+  color: #32cd32;
+}
+
+ion-textarea {
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+  --padding-start: 10px;
+  --padding-end: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  text-align: left;
+}
+
+ion-datetime-button {
+  --ion-color-step-300: var(--ion-color-primary);
+  --ion-text-color: #ffffff;
+}
+
+.form-steps {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 100%;
+  width: 100%;
+}
+
+.form-step-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  .form-step {
+    display: block;
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100%;
+    transition: left 0.3s ease-in-out;
+    width: 100%;
+    max-height: 100%;
+    align-items: stretch;
+    min-height: min-content;
+    padding: 15px;
+    overflow: auto;
+    text-align: center;
+
+    label {
+      display: block;
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .checklist {
+      height: 175px;
+      text-align: left;
+    }
+
+    .checklist ion-icon {
+      font-size: 18px;
+      margin-right: 10px;
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  .form-step.active {
+    left: 0;
+  }
+
+  .form-step.left {
+    left: -100%;
+  }
+}
+
+.form-steps-overview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0px;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  position: relative;
+  z-index: 5;
+
+  .item {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    label {
+      font-weight: bold;
+      font-size: 12px;
+    }
+
+    span {
+      display: flex;
+      background-color: #616e7e;
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 100px;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+  }
+
+  .item.active {
+    span {
+      background-color: var(--ion-color-primary, #3880ff);
+    }
+  }
+
+  .item.success {
+    span {
+      background-color: var(--ion-color-primary, #3880ff);
+    }
+  }
+
+  .item:first-child {
+    margin-left: 15px;
+  }
+
+  .item:last-child {
+    margin-right: 15px;
+  }
+}
+
+.form-steps-overview::before {
+  content: " ";
+  position: absolute;
+  top: 54px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 4;
+}
+
+.form-actions {
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  z-index: 5;
+
+  .form-action {
+    height: 36px;
+  }
+}

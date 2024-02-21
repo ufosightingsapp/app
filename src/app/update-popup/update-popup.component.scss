@@ -1,0 +1,54 @@
+ion-content {
+  --background: #121212;
+}
+
+.fullpage {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fullpage-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 15px;
+
+  .icon {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/assets/images/dark_map.png);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    svg {
+      width: 100px;
+      height: 100px;
+      color: white;
+    }
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
+.fullpage-footer {
+  padding: 10px 0px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ion-button ion-icon {
+    margin-right: 15px;
+  }
+}

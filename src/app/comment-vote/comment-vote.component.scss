@@ -1,0 +1,32 @@
+ion-item {
+  --inner-padding-end: 0px;
+}
+
+.voting-wrapper {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  button:disabled {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  button:disabled:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .light-red {
+    color: #ff4d4d;
+  }
+}
+
+ion-item {
+  --border-color: transparent;
+  --border-width: 0px;
+}
+
+small {
+  font-size: 12px;
+  opacity: 0.8;
+}

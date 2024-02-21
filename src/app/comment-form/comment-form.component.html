@@ -1,0 +1,18 @@
+<li class="form-wrapper" *ngIf="!submitted">
+  <div class="input-group" *transloco="let t">
+    <ion-textarea
+      [placeholder]="t('comments.form.text.placeholder')"
+      (ionInput)="onMessageChange($event)"
+      [value]="message"
+    ></ion-textarea>
+    <button class="send-comment" (click)="sendComment()">
+      <ion-icon name="send"></ion-icon>
+    </button>
+  </div>
+</li>
+<li *ngIf="!submitted">
+  <app-upload-media
+    (filesChange)="onFilesChange($event)"
+    (uploadChange)="onUploadChange($event)"
+  ></app-upload-media>
+</li>

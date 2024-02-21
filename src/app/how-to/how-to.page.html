@@ -1,0 +1,56 @@
+<ion-header *transloco="let t">
+  <ion-toolbar>
+    <ion-title>{{t("howto.header.title")}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">{{t("common.close")}}</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *transloco="let t">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-row class="ion-justify-content-start">
+        <app-navigation-toggle></app-navigation-toggle>
+        <ion-title>{{t("howto.header.title")}}</ion-title>
+      </ion-row>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{t("howto.body.card_first.title")}}</ion-card-title>
+      <ion-card-subtitle
+        >{{t("howto.body.card_first.subtitle")}}</ion-card-subtitle
+      >
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>{{t("howto.body.card_first.paragraphs.1")}}</p>
+      <p>{{t("howto.body.card_first.paragraphs.2")}}</p>
+      <p>{{t("howto.body.card_first.paragraphs.3")}}</p>
+      <p>{{t("howto.body.card_first.paragraphs.4")}}</p>
+      <p>{{t("howto.body.card_first.paragraphs.5")}}</p>
+      <p>{{t("howto.body.card_first.paragraphs.6")}}</p>
+      <br />
+      <p>{{t("howto.body.card_first.paragraphs.7")}}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{t("howto.body.card_second.title")}}</ion-card-title>
+      <ion-card-subtitle
+        >{{t("howto.body.card_second.subtitle")}}</ion-card-subtitle
+      >
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>{{t("howto.body.card_second.paragraphs.1")}}</p>
+      <p>{{t("howto.body.card_second.paragraphs.2")}}</p>
+      <p>{{t("howto.body.card_second.paragraphs.3")}}</p>
+      <br />
+      <p>{{t("howto.body.card_second.paragraphs.4")}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

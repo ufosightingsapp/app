@@ -1,0 +1,48 @@
+.loader {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.app-info-window {
+  width: 100%;
+
+  ion-item,
+  ion-list {
+    width: 100%;
+  }
+
+  app-report-vote {
+    width: 100%;
+  }
+
+  ion-item.no-border {
+    --border-color: transparent;
+    --border-width: 0px;
+  }
+}
+
+.align-items-start {
+  align-items: start;
+}
+
+.report {
+  margin-bottom: 20px;
+  --inner-padding-end: 0px;
+  --padding-end: 0px;
+}
+
+app-report {
+  width: 100%;
+}
+
+ion-content {
+  --background: #121212;
+}
+
+p.info {
+  text-align: center;
+  padding: 10px 20px;
+}

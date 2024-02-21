@@ -1,0 +1,10 @@
+<ion-item class="no-border ion-no-padding" *ngIf="myId == authorId">
+  <div class="remove-wrapper" *transloco="let t">
+    <small>{{ t("reportremove.info") }}</small>
+    <div>
+      <button class="remove-button" (click)="remove()">
+        <ion-icon name="trash"></ion-icon> {{ t("common.remove") }}
+      </button>
+    </div>
+  </div>
+</ion-item>

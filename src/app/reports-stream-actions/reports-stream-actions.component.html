@@ -1,0 +1,28 @@
+<div class="report-stream-actions" *transloco="let t">
+  <div class="left">
+    <ion-select [value]="sort" (ionChange)="changeSorting($event)">
+      <ion-select-option value="hot">{{ t("common.hot") }}</ion-select-option>
+      <ion-select-option value="latest">{{
+        t("common.latest")
+      }}</ion-select-option>
+      <ion-select-option value="recent">{{
+        t("common.recently_added")
+      }}</ion-select-option>
+    </ion-select>
+  </div>
+
+  <div class="right">
+    <ion-select
+      placeholder="Country"
+      [value]="country"
+      (ionChange)="changeCountry($event)"
+    >
+      <ion-select-option value="all">{{
+        t("common.worldwide")
+      }}</ion-select-option>
+      <ion-select-option *ngFor="let country of countries" [value]="country">{{
+        country
+      }}</ion-select-option>
+    </ion-select>
+  </div>
+</div>

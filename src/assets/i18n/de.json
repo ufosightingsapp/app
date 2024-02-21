@@ -1,0 +1,234 @@
+{
+  "brand": { "slogan": "Rund um den Globus" },
+  "common": {
+    "close": "Schließen",
+    "view_on_map": "Ansicht auf Karte",
+    "yes": "Ja",
+    "no": "Nein",
+    "view": "Siehe",
+    "hide": "Hide",
+    "comments": "comments",
+    "submit": "Einreichen",
+    "back": "Zurück",
+    "next": "Weiter",
+    "remove": "entfernen",
+    "video_unsupported": "Ihr Browser unterstützt das Video-Tag nicht.",
+    "video": "Video",
+    "photo": "Photo",
+    "map": "Karte",
+    "hot": "Heiß",
+    "latest": "Neueste",
+    "recently_added": "Kürzlich hinzugefügt",
+    "worldwide": "Weltweit",
+    "translate": "Übersetzen"
+  },
+  "navigation": {
+    "bottom": { "first": "Karte", "second": "Berichte" },
+    "side": {
+      "myreports": "Meine Berichte / Lesezeichen",
+      "howto": "HowTo",
+      "contact": "Kontakt",
+      "privacy": "Datenschutzbestimmungen",
+      "telegram": "Join uns auf Telegram"
+    }
+  },
+  "apppopup": {
+    "headline": "Nutze unsere Android-App!",
+    "text": "Erhalte Benachrichtigungen und viele weitere Funktionen in unserer App für Android."
+  },
+  "contact": {
+    "alerts": {
+      "invalid_email": "Bitte gib eine gültige E-Mail Adresse ein.",
+      "invalid_subject": "Bitte gib einen Betreff ein.",
+      "invalid_message": "Bitte gib eine Nachricht ein.",
+      "submit_success": "Deine Nachricht wurde erfolgreich gesendet.",
+      "submit_error": "Fehler beim Senden der E-Mail, bitte versuche es später noch einmal."
+    },
+    "header": { "title": "Kontakt" },
+    "body": {
+      "text": "Ihr seid die Gemeinschaft, ihr baut diese App. Schreibe uns, wenn du ein Anliegen hast, und wir nehmen es ernst. Wir werden so schnell wie möglich auf dich zurückkommen."
+    },
+    "form": {
+      "email": { "label": "Deine E-Mail", "placeholder": "" },
+      "subject": { "label": "Thema", "placeholder": "Gib dein Thema ein" },
+      "message": {
+        "label": "Nachricht",
+        "placeholder": "Deine Nachricht an uns"
+      },
+      "submit": "Senden"
+    }
+  },
+  "filter": {
+    "header": { "title": "Filter" },
+    "body": {
+      "text": "Verfeinere die auf der Karte angezeigten Standorte durch Anwendung eines zeitbasierten Filters."
+    },
+    "selections": {
+      "last_seven": "Letzte 7 Tage",
+      "last_thirty": "Letzte 30 Tage",
+      "last_six_months": "Letzte 6 Monate",
+      "last_twelve_months": "Letzte 12 Monate",
+      "all_time": "Alle Zeiten",
+      "from": "Von",
+      "to": "An"
+    },
+    "actions": { "back_map": "Zurück zur Karte" },
+    "toasts": {
+      "filter_applied": "Angewandter Filter",
+      "filter_cleared": "Filter gelöscht"
+    }
+  },
+  "howto": {
+    "header": { "title": "HowTo" },
+    "body": {
+      "card_first": {
+        "title": "Du hast ein UFO entdeckt und möchten es der Welt mitteilen?",
+        "subtitle": "Mit diesen einfachen Schritten ist das Einstellen Ihres Berichts ein Kinderspiel:",
+        "paragraphs": {
+          "1": " 1. Beginne mit einem Klick auf den Ort, an dem du das UFO gesehen hast - unsere interaktive Karte macht dies mühelos möglich!",
+          "2": "2. Es erscheint ein Pop-up-Formular, in dem du deine Begegnung schildern kannst. Beginne mit der Auswahl des Datums des Vorfalls.",
+          "3": "3. Fahre mit dem Textfeld für den Bericht fort und gib deine aufregende außerirdische Begegnung an. Sei so detailliert wie möglich, um andere an deinem Erlebnis teilhaben zu lassen!",
+          "4": "4. Wenn du einen visuellen Beweis für deine Sichtung hast, umso besser! Du hast ein optionales Feld, um Fotos hochzuladen und den Moment zu verewigen.",
+          "5": "5. Hast du die Sichtung auf Video aufgenommen? Du kannst in einem weiteren optionalen Feld einen Link zu einem YouTube-Video angeben. Videos verleihen deinen Berichten eine unvergleichliche Tiefe!",
+          "6": "6. Klicke abschließend auf die Schaltfläche \"Senden\", um deinen Bericht zu veröffentlichen und deine Himmelsbegegnung mit unserer weltweiten Gemeinschaft zu teilen.",
+          "7": "Fangen wir also an, uns auszutauschen und uns mit anderen auf der universellen Suche nach dem Außergewöhnlichen zu verbinden!"
+        }
+      },
+      "card_second": {
+        "title": "Die Entfernung von Inhalten aus der App \"UFO-Sichtungen\" ist eine kollektive Entscheidung, wodurch die Plattform wirklich von der Gemeinschaft gesteuert wird.",
+        "subtitle": "Hier erfahre, wie du dazu beitragen kannst:",
+        "paragraphs": {
+          "1": " 1. Blättere durch die veröffentlichten Berichte. Wenn du auf einen Bericht stößt, der deiner Meinung nach nicht Teil der App sein sollte - sei es aufgrund von Irrelevanz, falschen Informationen oder aus anderen Gründen - stimme ihn ab.",
+          "2": "2. Das Abstimmen ist so einfach wie das Drücken einer Taste. Suche nach der Option \"Downvote\", die in der Regel durch einen nach unten zeigenden Pfeil oder ein \"Daumen runter\"-Symbol dargestellt wird, und klicke darauf.",
+          "3": "3. Eine Ansammlung von Downvotes gleicht das Spielfeld aus. Wenn ein Bericht eine 66%ige oder mehr negative Bewertung erhält, wird er automatisch aus der App entfernt.",
+          "4": "Dieser demokratische Prozess stellt sicher, dass die Informationen in unserer Community korrekt und relevant sind und interessante Gespräche anregen. Also, bewerte, stimme ab und hilf uns, eine hochwertige Gemeinschaft zu erhalten!"
+        }
+      }
+    }
+  },
+  "map": {
+    "header": { "title": "Karte" },
+    "alerts": {
+      "unknown_spot": "Der report konnte nicht gefunden werden, bitte versuche es erneut."
+    },
+    "toasts": {
+      "no_spots_in_time": "Keine Sichtungen in dem von dir gewählten Zeitbereich gefunden."
+    },
+    "guide": {
+      "paragraph": "Tipp: Um eine UFO-Sichtung zu melden, tippe einfach auf den Ort auf der Karte, an dem das Ereignis stattgefunden hat."
+    },
+    "infowindow": {
+      "header": { "title": "Informationen" },
+      "body": {
+        "empty": "Hier gibt es nichts zu sehen, dieser Bericht ist leer, weil der/die Bericht/e vor kurzem entfernt wurden. Der Spot wird bald verschwinden."
+      }
+    },
+    "formwindow": { "header": { "title": "Sichtung melden" } }
+  },
+  "myreports": {
+    "header": { "title": "Meine Berichte" },
+    "empty_reports": "Du hast noch keinen Bericht erstellt.",
+    "empty_bookmarks": "Du hast noch keinen Bericht mit einem Lesezeichen versehen.",
+    "tabs": { "first": "Meine Berichte", "second": "Lesezeichen" }
+  },
+  "notifications": {
+    "header": { "title": "Benachrichtigungen" },
+    "empty": "Du hast noch keine Benachrichtigungen erhalten."
+  },
+  "pushrequest": {
+    "confirm_message": "Möchtest dz benachrichtigt werden, wenn du dich in der Nähe einer aktuellen UFO-Sichtung befindest?"
+  },
+  "comments": {
+    "hook": "Sei der Erste, der einen Kommentar hinterlässt.",
+    "form": { "text": { "placeholder": "Hinterlassen deinen Kommentar..." } }
+  },
+  "commentvote": {
+    "request": "War dieser Kommentar hilfreich/informativ?",
+    "info": "Downvotes werden diesen Kommentar entfernen:"
+  },
+  "reportform": {
+    "steps": {
+      "first": "Date",
+      "second": "Bericht",
+      "third": "Medien",
+      "fourth": "Online"
+    },
+    "date": { "label": "Schreibe deinen Bericht:" },
+    "report": {
+      "label": "Schreibe deinen Bericht:",
+      "placeholder": "Bitte gib in deinem Bericht viele Details an. Erzähle uns, wie das Wetter war, wie das UFO aussah und wie es sich bewegte. Lass uns wissen, wie lange du es gesehen hast und ob es noch jemand anderes gesehen hat.",
+      "checklist": {
+        "label": "Checkliste zum Verfassen eines guten Berichts (optional):",
+        "items": {
+          "first": "Wetter",
+          "second": "ca. Abstand",
+          "third": " Objektform",
+          "fourth": "Objektbewegung",
+          "fifth": "Duration",
+          "sixth": "Andere Zeugen"
+        }
+      }
+    },
+    "media": { "label": "Fotos oder Videos hochladen (optional)" },
+    "online": {
+      "youtube": "Füge ein YouTube-Video hinzu (optional):",
+      "youtube_short": "Füge ein YouTube-Kurzvideo hinzu (optional):",
+      "tiktok": "Füge ein TikTok-Video hinzu (optional):"
+    },
+    "alerts": {
+      "steps": {
+        "2": {
+          "title": "Ungültiger Text",
+          "text": "Bitte gib zunächst ein paar Worte zu deiner Sichtung ein."
+        },
+        "3": {
+          "title": "Bitte warte...",
+          "text": "Deine Dateien werden noch hochgeladen. Bitte warte einen Moment."
+        }
+      },
+      "date": {
+        "invalid": {
+          "title": "Ungültiges Datum",
+          "text": "Bitte wähle ein Datum aus, das in der Vergangenheit liegt."
+        }
+      },
+      "submit": {
+        "invalid_date": "Bitte wähle ein Datum aus, das in der Vergangenheit liegt.",
+        "invalid_report": "Bitte gib zunächst ein paar Worte zu Ihrer Sichtung ein.",
+        "invalid_youtube": "Ungültige YouTube-URL",
+        "invalid_youtube_short": "Ungültige YouTube-Short-URL",
+        "invalid_tiktok": "Ungültige TikTok-URL",
+        "send_error": "Fehler beim Speichern des Berichts. Bitte versuche es später noch einmal."
+      }
+    }
+  },
+  "reportremove": {
+    "info": "Möchtest du deinen Bericht entfernen?",
+    "confirm": "Möchtest du diese Meldung wirklich entfernen?"
+  },
+  "reportvote": {
+    "info": "War dieser Bericht hilfreich/informativ?",
+    "info_remove": "Downvotes werden diesen Bericht entfernen:"
+  },
+  "reportstream": {
+    "header": { "title": "Berichte" },
+    "body": { "title": "Neueste Berichte" },
+    "tabs": { "first": "Letzte Sichtungen", "second": "Kürzlich hinzugefügt" }
+  },
+  "spotinfo": {
+    "header": { "title": "Erste Sichtung", "sighting": "Sichtung" }
+  },
+  "appupdate": {
+    "header": { "title": "Update verfügbar" },
+    "body": {
+      "text": "Eine Welt der Leistungssteigerung wartet auf dich. Wir sind überzeugt, dass du es lieben wirst. Um das Update zu erhalten, gehe einfach in den App Store und klicke auf die Schaltfläche \"Update\"."
+    },
+    "action": "Jetzt installieren!"
+  },
+  "uploadmedia": {
+    "web_button_label": "Videos oder Fotos anhängen",
+    "toasts": {
+      "error": "Fehler beim Hochladen Ihrer Datei, bitte versuche es erneut."
+    }
+  }
+}

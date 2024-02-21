@@ -1,0 +1,91 @@
+<div
+  [ngClass]="report.negativeScorePercent >= 50 ? 'expiring' : ''"
+  *transloco="let t"
+>
+  <div class="report-ogimage" *ngIf="ogimage && report.ogImage">
+    <img [src]="getOgImageUrl()" />
+    <ion-spinner name="dots"></ion-spinner>
+  </div>
+  <div class="report-header">
+    <div class="start">
+      <img
+        alt="User"
+        class="avatar"
+        src="./assets/images/avatar.svg"
+        width="45"
+        height="45"
+      />
+      <div class="report-header-details">
+        <label class="username">Anonymous</label>
+        <small>{{ formatDateTime(report.creationTime) }}</small>
+        <small class="location" *ngIf="report.spot?.country"
+          >{{ report.spot.country }}, {{ report.spot.state }},
+          {{ report.spot.city }}
+        </small>
+      </div>
+    </div>
+    <div class="end report-header-actions">
+      <button (click)="share()">
+        <ion-icon name="share-social-outline"></ion-icon>
+      </button>
+      <button (click)="bookmark()">
+        <ion-icon
+          name="bookmark"
+          class="c-blue"
+          *ngIf="isBookmarked"
+        ></ion-icon>
+        <ion-icon name="bookmark-outline" *ngIf="!isBookmarked"></ion-icon>
+      </button>
+    </div>
+  </div>
+  <!-- <div class="alert info" *ngIf="report?.probablyStarlink">
+    <div class="alert-icon">
+      <ion-icon name="alert-circle-outline"></ion-icon>
+    </div>
+    <div class="alert-text">
+      <strong>Info:</strong>&nbsp;On the date of the sighting, Starlink was
+      visible in the sky at this location. Please consider this when reading the
+      report.
+    </div>
+  </div> -->
+
+  <div class="report-body" [innerHTML]="formatText(report.text)"></div>
+  <div class="report-body-actions" *ngIf="!translated">
+    <button *ngIf="!translating" (click)="translate()">
+      <ion-icon name="globe-outline"></ion-icon>
+      <span>{{ t("common.translate") }}</span>
+    </button>
+    <ion-spinner name="dots" *ngIf="translating"></ion-spinner>
+  </div>
+  <div
+    class="report-attachements"
+    *ngIf="report.media && report.media.length >= 1"
+  >
+    <div class="media-cage">
+      <app-media-list [media]="report.media"></app-media-list>
+    </div>
+  </div>
+  <div class="report-note" *ngIf="report.note">
+    <strong>Moderator Note:</strong>&nbsp;{{ report.note }}
+  </div>
+  <div class="report-actions" *transloco="let t">
+    <div class="row">
+      <div class="toggler-row">
+        <button class="comment-button" (click)="toggleComments()">
+          <ion-icon name="chevron-down-outline" *ngIf="!showComments"></ion-icon
+          ><ion-icon name="chevron-up-outline" *ngIf="showComments"></ion-icon>
+          <span *ngIf="!showComments">{{ t("common.view") }}</span
+          ><span *ngIf="showComments">{{ t("common.hide") }}</span
+          >&nbsp;{{ t("common.comments") }} ({{ getCommentsCount() }})
+        </button>
+      </div>
+      <app-report-vote [report]="report"></app-report-vote>
+    </div>
+    <app-comments [report]="report" *ngIf="showComments"></app-comments>
+    <app-report-remove
+      [reportId]="report._id"
+      [authorId]="report?.authorIdentifier || ''"
+      (refresh)="removeRefresh()"
+    ></app-report-remove>
+  </div>
+</div>
