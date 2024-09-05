@@ -29,7 +29,7 @@ import { TranslocoService } from '@ngneat/transloco';
   styleUrls: ['./map.page.scss'],
 })
 export class MapPage implements OnInit, AfterViewInit, OnDestroy {
-  apiKey = 'AIzaSyDp3ZD5n6BYO-muF-PxnnrO1vDleU2i1cs';
+  apiKey = '[API_KEY_HERE]';
   @ViewChild('map', { read: ElementRef }) mapRef: ElementRef;
   sightingMap: GoogleMap;
   params: any;
